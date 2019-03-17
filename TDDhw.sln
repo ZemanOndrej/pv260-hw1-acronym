@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{EFECAA12-B2EA-43F8-8A27-CE0D4682625A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acronymizer", "Acronymizer\Acronymizer.csproj", "{BB41AA9B-CC08-4997-9ED2-4E9DAAE5D724}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcronymizerTests", "AcronymizerTests\AcronymizerTests.csproj", "{039E5519-167D-49BE-9C51-8ACD516F577E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{EFECAA12-B2EA-43F8-8A27-CE0D4682625A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFECAA12-B2EA-43F8-8A27-CE0D4682625A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFECAA12-B2EA-43F8-8A27-CE0D4682625A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB41AA9B-CC08-4997-9ED2-4E9DAAE5D724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB41AA9B-CC08-4997-9ED2-4E9DAAE5D724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB41AA9B-CC08-4997-9ED2-4E9DAAE5D724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB41AA9B-CC08-4997-9ED2-4E9DAAE5D724}.Release|Any CPU.Build.0 = Release|Any CPU
+		{039E5519-167D-49BE-9C51-8ACD516F577E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{039E5519-167D-49BE-9C51-8ACD516F577E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{039E5519-167D-49BE-9C51-8ACD516F577E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{039E5519-167D-49BE-9C51-8ACD516F577E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
