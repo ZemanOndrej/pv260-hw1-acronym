@@ -7,8 +7,7 @@ namespace ConsoleApp1
 	{
 		static void Main(string[] args)
 		{
-			var parser = new AcronymParser();
-			Console.WriteLine(parser.CreateAcronym("Asynchronous Javascript and XML"));
+			Console.WriteLine(AcronymParser.CreateAcronym("Asynchronous Javascript and XML"));
 		}
 	}
 }
