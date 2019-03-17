@@ -40,8 +40,9 @@ namespace Tests
 		public void Test_config_with_and()
 		{
 			Assert.AreEqual(
-				AcronymParser.CreateAcronym("Rhythm and blues",
-					replaceOpts: new List<(string ReplaceWord, string ReplaceWith)> {("and", "&")}),
+				AcronymParser.CreateAcronym("Rhythm and blues", processString: (str =>
+						str.Replace("and", "&")
+					)),
 				"R&B");
 		}
 
@@ -49,8 +50,9 @@ namespace Tests
 		public void Test_config_with_and_within_word()
 		{
 			Assert.AreEqual(
-				AcronymParser.CreateAcronym("hand leg",
-					replaceOpts: new List<(string ReplaceWord, string ReplaceWith)> {("and", "&")}),
+				AcronymParser.CreateAcronym("hand leg", processString: (str =>
+						str.Replace("and", "&")
+					)),
 				"HL");
 		}
 	}

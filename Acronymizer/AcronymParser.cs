@@ -5,13 +5,12 @@ using System.Linq;
 namespace Acronymizer
 {
 	/*
-	 * I would do the extension for user defined symbols either like this with static method and configuration or with functional approach.
-	 * My createAcronym would have function as parameter. This function would be called on every split string so that user can replace symbols on his own.
+	 * Functional method
 	 */
 	public static class AcronymParser
 	{
 		public static string CreateAcronym(string input, IEnumerable<char> splitOpts = null,
-			IEnumerable<(string ReplaceWord, string ReplaceWith)> replaceOpts = null)
+			Func<string, string> processString = null)
 
 		{
 			if (string.IsNullOrEmpty(input))
@@ -19,14 +18,11 @@ namespace Acronymizer
 				return input;
 			}
 
-			replaceOpts = replaceOpts ?? new List<(string ReplaceWord, string ReplaceWith)>();
 			splitOpts = splitOpts ?? new[] {' ', '-'};
+			processString = processString ?? (str => str);
 
 			return input.Split(splitOpts.ToArray(), StringSplitOptions.RemoveEmptyEntries)
-				.Select(str =>
-					replaceOpts.Aggregate(str, (acc, opt) =>
-						acc.Replace(opt.ReplaceWord, opt.ReplaceWith))
-				)
+				.Select(str => processString(str))
 				.Aggregate("", (acc, word) => acc + char.ToUpper(word[0]));
 		}
 	}
